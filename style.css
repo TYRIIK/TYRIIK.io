@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmsddOkCvOMydsxZsdRUcrWVRsEkAj3vVMeA&s */
+/* https://static8.tgstat.ru/channels/_0/b5/b54b5187b635971caeabfebbd3a84429.jpg */
+/* https://static7.tgstat.ru/channels/_0/57/57255279b97437c6d68f35250abd6a69.jpg */
+body {
+    background-color: #000;
+    background-image: url("https://static7.tgstat.ru/channels/_0/57/57255279b97437c6d68f35250abd6a69.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    text-align: center;
+}
+
+.avatar-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.info-section {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.info-section b {
+    color: #888;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #888;
+    border-color: #888;
+}
+
+.placeholder {
+    color: #444;
+    font-size: 0.9rem;
+}
+
+/* Адаптация под мобилки */
+@media (max-width: 600px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
